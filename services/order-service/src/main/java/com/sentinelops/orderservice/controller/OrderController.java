@@ -1,5 +1,6 @@
 package com.sentinelops.orderservice.controller;
 
+import com.sentinelops.orderservice.model.Order;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -7,8 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderController {
 
     @GetMapping("/orders")
-    public String getOrders() {
-        return "Welcome to SentinelOps Order Service!";
+    public Order getOrders() {
+        return new Order(101, "Laptop", 2, "CREATED");
     }
 }
-
